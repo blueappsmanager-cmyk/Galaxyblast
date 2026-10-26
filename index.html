@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Galaxy Blast - Cosmic Block Puzzle Game</title>
+  <meta name="description" content="Official Privacy Policy for Galaxy Blast - Cosmic Block Puzzle Game (com.blueapps.cosmicblockpuzzle) developed by BlueAppsBox." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #a855f7;
+      --primary-light: #c084fc;
+      --primary-dark: #6b21a8;
+      --cyan: #38bdf8;
+      --amber: #fbbf24;
+      --bg-dark: #060515;
+      --bg-card: rgba(18, 14, 46, 0.88);
+      --border-card: rgba(168, 85, 247, 0.28);
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-sub: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: radial-gradient(circle at 50% 10%, #1c0e3f 0%, #0c0824 45%, #060515 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.75;
+      padding: 32px 16px 64px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Ambient Nebulae */
+    .bg-glow-1 {
+      position: fixed;
+      top: -15%;
+      left: -10%;
+      width: 60vw;
+      height: 60vh;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, transparent 70%);
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-glow-2 {
+      position: fixed;
+      bottom: -15%;
+      right: -10%;
+      width: 60vw;
+      height: 60vh;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Reading Progress Bar */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 0%;
+      background: linear-gradient(90deg, #a855f7, #38bdf8, #fbbf24);
+      z-index: 999;
+      transition: width 0.1s ease-out;
+    }
+
+    .container {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 860px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 24px;
+      padding: 40px 32px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(168, 85, 247, 0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 24px 18px;
+        border-radius: 18px;
+      }
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+      margin-bottom: 32px;
+    }
+
+    .planet-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      background: radial-gradient(circle at 35% 30%, #ec4899, #8b5cf6 60%, #4c1d95 100%);
+      border-radius: 50%;
+      box-shadow: 0 0 28px rgba(168, 85, 247, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+      margin-bottom: 16px;
+      font-size: 34px;
+    }
+
+    h1 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--cyan);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .meta-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+    }
+
+    .badge strong {
+      color: #ffffff;
+    }
+
+    /* Search Bar */
+    .search-wrapper {
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 12px 18px 12px 42px;
+      border-radius: 14px;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      background: rgba(10, 8, 30, 0.7);
+      color: #ffffff;
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary-light);
+      box-shadow: 0 0 16px rgba(168, 85, 247, 0.3);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      opacity: 0.6;
+    }
+
+    /* Content Sections */
+    .section {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(168, 85, 247, 0.12);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 22px;
+      transition: border-color 0.2s ease;
+    }
+
+    .section:hover {
+      border-color: rgba(168, 85, 247, 0.35);
+    }
+
+    h2 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .sec-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(168, 85, 247, 0.2);
+      color: var(--primary-light);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      margin-bottom: 12px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 12px 0;
+      padding-left: 4px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      color: var(--text-muted);
+      font-size: 14.5px;
+    }
+
+    li::before {
+      content: "🪐";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 12px;
+    }
+
+    .highlight-box {
+      background: rgba(168, 85, 247, 0.08);
+      border-left: 3px solid var(--primary-light);
+      padding: 14px 18px;
+      border-radius: 0 12px 12px 0;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #e9d5ff;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(56, 189, 248, 0.08));
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    .email-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      padding: 10px 20px;
+      border-radius: 30px;
+      margin-top: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #ffffff;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .email-chip:hover {
+      background: rgba(168, 85, 247, 0.25);
+      border-color: var(--cyan);
+      transform: translateY(-1px);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 36px;
+      color: var(--text-sub);
+      font-size: 12.5px;
+    }
+
+    .footer a {
+      color: var(--primary-light);
+      text-decoration: none;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #10b981;
+      color: #ffffff;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- Ambient Nebulae -->
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <div class="container">
+    
+    <!-- Header -->
+    <header class="header">
+      <div class="planet-badge">🪐</div>
+      <h1>Privacy Policy</h1>
+      <div class="subtitle">Galaxy Blast - Cosmic Block Puzzle Game</div>
+      
+      <div class="meta-box">
+        <span class="badge">📦 Package: <strong>com.blueapps.cosmicblockpuzzle</strong></span>
+        <span class="badge">🏢 Developer: <strong>BlueAppsBox</strong></span>
+        <span class="badge">📅 Effective: <strong>October 24, 2026</strong></span>
+      </div>
+    </header>
+
+    <!-- Quick Search -->
+    <div class="search-wrapper">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="policy-search" class="search-input" placeholder="Search privacy topics (e.g. AdMob, Children, Data Deletion, Cookies)..." />
+    </div>
+
+    <main id="policy-content">
+
+      <!-- Section 1 -->
+      <section class="section">
+        <h2><span class="sec-num">1</span> Introduction & Overview</h2>
+        <p>
+          Welcome to <strong>Galaxy Blast - Cosmic Block Puzzle Game</strong> (hereinafter referred to as the "Game" or "Application"), developed and published by <strong>BlueAppsBox</strong> (also operating as <strong>blueappbox</strong>, "we", "us", or "our"). We are committed to protecting the privacy, security, and personal integrity of all players who enjoy our games.
+        </p>
+        <p>
+          This Privacy Policy transparently governs how data is processed when you download, install, play, or interact with <strong>Galaxy Blast - Cosmic Block Puzzle Game</strong> (Application ID / Package Name: <code>com.blueapps.cosmicblockpuzzle</code>). By downloading or playing the Game, you acknowledge and agree to the data collection and usage practices described in this document.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="section">
+        <h2><span class="sec-num">2</span> Information We Collect</h2>
+        <p>
+          Galaxy Blast is designed as an offline-friendly, privacy-respecting cosmic block puzzle experience. We do not require account registration, social media logins, usernames, passwords, phone numbers, or credit card details to play.
+        </p>
+        <p>The only categories of information handled include:</p>
+        <ul>
+          <li><strong>Local Gameplay Data (Stored On-Device):</strong> Your level progression (Levels 1 to 300), high scores, cosmic star ratings, audio volume settings, and game state. This data is strictly stored locally on your device via HTML5 LocalStorage and is never transmitted to any private server operated by us.</li>
+          <li><strong>Device & Telemetry Information:</strong> Device model, operating system version (e.g. Android 13/14), screen resolution, preferred language, battery state, and network type (Wi-Fi or cellular) collected automatically through standard Google Play Services.</li>
+          <li><strong>Advertising Identifiers & Diagnostics:</strong> The Google Advertising ID (AAID) provided by Google Play, approximate coarse location (country/city level via IP address), and anonymized crash logs to ensure stable gameplay performance.</li>
+        </ul>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="section">
+        <h2><span class="sec-num">3</span> Third-Party Services & Google AdMob Disclosures</h2>
+        <p>
+          To keep the Game 100% free for all puzzle enthusiasts worldwide, Galaxy Blast displays non-intrusive advertisements (Adaptive Banners and optional Rewarded Video Ads for Revive bonuses) provided by <strong>Google AdMob</strong>.
+        </p>
+        <p>These third-party SDK partners may process anonymized information under their respective privacy policies:</p>
+        <ul>
+          <li><strong>Google AdMob & Google Play Services:</strong> Used for ad mediation, fraud prevention, test ad delivery, frequency capping, and optional rewarded revive functionality. Review Google's Privacy Policy at: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color: var(--cyan); text-decoration: underline;">https://policies.google.com/privacy</a></li>
+          <li><strong>Google Mobile Ads Consent & Privacy:</strong> Learn how Google manages data in advertising products: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener" style="color: var(--cyan); text-decoration: underline;">https://policies.google.com/technologies/ads</a></li>
+        </ul>
+        <div class="highlight-box">
+          <strong>Rewarded Ads Note:</strong> Watching a rewarded video ad to unlock a Revive bonus is completely voluntary and player-initiated. You are never forced to watch rewarded ads to play the standard puzzle board.
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="section">
+        <h2><span class="sec-num">4</span> Children’s Privacy (COPPA Compliance)</h2>
+        <p>
+          Protecting children is of paramount importance to <strong>BlueAppsBox</strong>. Galaxy Blast is designed as a family-friendly casual brain teaser for all ages.
+        </p>
+        <ul>
+          <li>The Game does <strong>not knowingly collect or solicit personal identifiable information (PII)</strong> from children under the age of 13 (or under the applicable age of digital consent in your territory).</li>
+          <li>If you are a parent or guardian and believe that your child has provided personal information to third-party ad networks through our game without your consent, please contact us immediately at <strong>blueappsmanager@gmail.com</strong>. We will promptly take necessary steps to delete and purge any such records.</li>
+        </ul>
+      </section>
+
+      <!-- Section 5 -->
+      <section class="section">
+        <h2><span class="sec-num">5</span> User Rights & Data Deletion (GDPR & CCPA)</h2>
+        <p>
+          Depending on your jurisdiction (such as the European Economic Area under GDPR or California under CCPA/CPRA), you possess distinct legal rights regarding your digital footprint:
+        </p>
+        <ul>
+          <li><strong>Right to Clear Local Data:</strong> You can completely erase all local scores, unlocked levels, and settings at any moment by navigating to your Android device settings: <em>Settings → Apps → Galaxy Blast → Storage → Clear Storage / Clear Data</em>.</li>
+          <li><strong>Right to Opt-Out of Personalized Ads:</strong> You can reset or delete your Google Advertising ID at any time via: <em>Android Settings → Google → Ads → Delete Advertising ID / Reset Advertising ID</em>.</li>
+          <li><strong>Right to Inquiry & Erasure:</strong> To request confirmation of any telemetry data or ask privacy-related questions, email us directly at <strong>blueappsmanager@gmail.com</strong>.</li>
+        </ul>
+      </section>
+
+      <!-- Section 6 -->
+      <section class="section">
+        <h2><span class="sec-num">6</span> Data Security Measures</h2>
+        <p>
+          We implement rigorous industry-standard security safeguards. All communications with third-party service providers (such as Google AdMob) utilize encrypted Hypertext Transfer Protocol Secure (HTTPS / TLS 1.3) transmission. We do not maintain any external databases containing personal player records.
+        </p>
+      </section>
+
+      <!-- Section 7 -->
+      <section class="section">
+        <h2><span class="sec-num">7</span> Policy Updates & Changes</h2>
+        <p>
+          We may periodically update this Privacy Policy to reflect app enhancements, Google Play Console policy amendments, or evolving international legal requirements. Any modifications will be posted directly to this URL with a revised "Effective Date" at the top of this document. Continued use of Galaxy Blast following changes constitutes acceptance of the updated terms.
+        </p>
+      </section>
+
+      <!-- Contact Section -->
+      <div class="contact-card">
+        <h2>📬 Contacting Developer (BlueAppsBox)</h2>
+        <p style="color: #e2e8f0; font-size: 14.5px;">
+          Have questions, suggestions, or concerns regarding your privacy in <strong>Galaxy Blast - Cosmic Block Puzzle Game</strong>? Reach out directly to our dedicated support team:
+        </p>
+        
+        <div class="email-chip" id="copy-email-btn" title="Click to copy email address">
+          <span>✉️</span>
+          <span>blueappsmanager@gmail.com</span>
+          <span style="font-size: 11px; opacity: 0.7; padding-left: 4px;">(Click to Copy)</span>
+        </div>
+
+        <p style="margin-top: 14px; font-size: 13px; color: var(--text-sub);">
+          Company: <strong>BlueAppsBox</strong> | Package: <strong>com.blueapps.cosmicblockpuzzle</strong>
+        </p>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 <strong>BlueAppsBox</strong>. All rights reserved.</p>
+      <p style="margin-top: 4px;">Galaxy Blast - Cosmic Block Puzzle Game &bull; Built with cosmic care for Android.</p>
+    </footer>
+
+  </div>
+
+  <!-- Copied Toast -->
+  <div id="toast" class="toast">Email copied to clipboard! ✨</div>
+
+  <script>
+    // 1. Reading Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+
+    // 2. Interactive Search & Highlight
+    const searchInput = document.getElementById('policy-search');
+    const sections = document.querySelectorAll('.section');
+
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      sections.forEach(sec => {
+        const text = sec.textContent.toLowerCase();
+        if (!q || text.includes(q)) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    });
+
+    // 3. Copy Email to Clipboard
+    const copyBtn = document.getElementById('copy-email-btn');
+    const toast = document.getElementById('toast');
+
+    copyBtn.addEventListener('click', () => {
+      const email = 'blueappsmanager@gmail.com';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(showToast);
+      } else {
+        const temp = document.createElement('textarea');
+        temp.value = email;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+        showToast();
+      }
+    });
+
+    function showToast() {
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+  </script>
+</body>
+</html>
